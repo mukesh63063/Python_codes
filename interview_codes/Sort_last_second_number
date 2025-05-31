@@ -1,0 +1,10 @@
+a = [4324, 6595, 6750, 4275, 9843, 8503]
+s = [str(i) for i in a]
+n = len(s)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if s[j][-2] > s[j+1][-2]:
+            s[j], s[j+1] = s[j+1], s[j]
+
+r = [int(i) for i in s]
+print(r)
