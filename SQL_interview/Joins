@@ -1,1 +1,6 @@
+# There are 2 tables and these 2 tables. 1-table has 5 rows and 2 columns. 2-table has 2 rows and 2 columns. write query unmatched data only return?
 
+@ Left anti join 
+select table-1.emp_name, table-1.salary from table-1 left join table-2
+on table-1.emp_name = table-2.emp_name
+where table-2.emp_name is NULL
