@@ -1,1 +1,9 @@
+Note :- There are 3 main points.
+1. Outer query -----> { where clause salary = ( ) }
+2. sub_query -------> { aggregation min or max.. salary ( ....) }
+3. sub_inner_query -> { (i). distinct top salary. (ii). order by (iii). desc }
 
+# Question -1. Find higest second employee name?
+select emp_name, salary from emp_data
+where salary = ( select min(salary) from ( select distinct top 2 salary from emp_data 
+                                            order by salary desc) as highest_salary).
