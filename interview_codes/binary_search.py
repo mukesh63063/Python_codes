@@ -4,7 +4,7 @@ def binary_search(a, t):
     n = len(a)
     l, r = 0, (n-1)
     while r>=l:
-        m = l + (r-l)//2
+        m = (l+r)//2
         if a[m] == t:
             return m
         elif a[m] < t:
